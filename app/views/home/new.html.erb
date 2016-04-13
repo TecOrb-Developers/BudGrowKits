@@ -1,0 +1,9 @@
+<div class="container">
+  <%=form_for :upload_csv,url: import_csv_path do |f|%>
+    <div class="form-group">
+      <label for="email">Upload csv:</label>
+      <%=f.file_field :csv,:class=>"form-control",:required=>"true"%>
+    </div>
+    <%=f.submit "Submit",:class=>"btn btn-default" %>
+  <%end%>
+</div>
