@@ -91,7 +91,8 @@
                 <div class="item-inner">
                   <div class="product-block">
                     <div class="product-image">
-                      <a href="product_detail.html">
+                    <%#=link_to "<span> #{p.name}</span>".html_safe,product_path(p.id),"data-no-turbolink" => true%>
+                      <a href="<%=product_path(p.id)%>" data-no-turbolink = true>
                         <figure class="product-display">
                           <div class="sale-label sale-top-left">Sale</div>
                           <img src='<%=p.product_images.first.present? ? "http://tecorb.com/admin/growace/images/#{p.sku.gsub('[','').gsub(']','').strip}_1.jpg" : "/assets/p7.jpg"%>' class="lazyOwl product-mainpic" alt="Sample Product" style="display: block;" width="100%"> <img class="product-secondpic" alt=" Sample Product" src="<%=p.product_images.second.present? ? "http://tecorb.com/admin/growace/images/#{p.sku.gsub('[','').gsub(']','').strip}_2.jpg" : "/assets/large-icon-sitemap.png"%>" width="100%"> 
@@ -99,15 +100,15 @@
                       </a>
                     </div>
                     <div class="product-meta">
-                      <div class="product-action"> <a class="addcart" href="shopping_cart.html"> <i class="icon-shopping-cart">&nbsp;</i> Add to cart </a>
-                        <a class="wishlist" href="wishlist.html"> <i class="icon-heart">&nbsp;</i> </a>
+                      <div class="product-action"> <a class="addcart" href="#"> <i class="icon-shopping-cart">&nbsp;</i> Add to cart </a>
+                        <a class="wishlist" href="#"> <i class="icon-heart">&nbsp;</i> </a>
                         <a class="quickview" href="javascript:;"> <i class="icon-zoom">&nbsp;</i> </a> 
                       </div>
                     </div>
                   </div>
                   <div class="item-info">
                     <div class="info-inner">
-                      <div class="item-title"> <a href="product_detail.html" title="Retis lapen casen"> <%=p.name%></a> </div>
+                      <div class="item-title"> <%=link_to "#{p.name}".html_safe,product_path(p.id),"data-no-turbolink" => true%> </div>
                       <div class="item-content">
                         <div class="item-price">
                           <div class="price-box"> 
@@ -943,18 +944,18 @@
             <p class="block-subtitle">Recently added item(s) </p>
             <ul>
               <li class="item">
-                <a class="product-image" title="Fisher-Price Bubble Mower" href="product_detail.html"><img width="80" alt="product-image" src="/assets/product1.jpg"></a>
+                <a class="product-image" title="Fisher-Price Bubble Mower" href="#"><img width="80" alt="product-image" src="/assets/product1.jpg"></a>
                 <div class="product-details">
                   <div class="access"> <a class="btn-remove1" title="Remove This Item" href="#"> <span class="icon"></span> Remove </a> </div>
-                  <p class="product-name"> <a href="product_detail.html">Sample Product</a> </p>
+                  <p class="product-name"> <a href="#">Sample Product</a> </p>
                   <strong>1</strong> x <span class="price">$19.99</span> 
                 </div>
               </li>
               <li class="item last">
-                <a class="product-image" title="Prince Lionheart Jumbo Toy Hammock" href="product_detail.html"><img width="80" alt="product-image" src="/assets/product1.jpg"></a>
+                <a class="product-image" title="Prince Lionheart Jumbo Toy Hammock" href="#"><img width="80" alt="product-image" src="/assets/product1.jpg"></a>
                 <div class="product-details">
                   <div class="access"> <a class="btn-remove1" title="Remove This Item" href="#"> <span class="icon"></span> Remove </a> </div>
-                  <p class="product-name"> <a href="product_detail.html"> Sample Product</a> </p>
+                  <p class="product-name"> <a href="#"> Sample Product</a> </p>
                   <strong>1</strong> x <span class="price">$8.00</span> 
                   <!--access clearfix--> 
                 </div>

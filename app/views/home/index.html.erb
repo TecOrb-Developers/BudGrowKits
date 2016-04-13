@@ -156,7 +156,7 @@
                   <div class="item-inner">
                     <div class="product-block">
                       <div class="product-image">
-                        <a href="product_detail.html">
+                        <a href="<%=product_path(p.id)%>" data-no-turbolink = true>
                           <figure class="product-display">
                             <div class="sale-label sale-top-left">Sale</div>
                             <img src="<%=p.product_images.first.present? ? "http://tecorb.com/admin/growace/images/#{p.sku.gsub('[','').gsub(']','').strip}_1.jpg" : "/assets/p7.jpg"%>" class="lazyOwl product-mainpic" alt="product-image" style="display: block;"> <img class="product-secondpic" alt="product-image" src="<%=p.product_images.second.present? ? "http://tecorb.com/admin/growace/images/#{p.sku.gsub('[','').gsub(']','').strip}_2.jpg" : "/assets/p7.jpg"%>"> </figure>
@@ -507,7 +507,7 @@
                   <div class="item-inner">
                     <div class="product-block">
                       <div class="product-image">
-                        <a href="product_detail.html">
+                        <a href="<%=product_path(p.id)%>" data-no-turbolink = true>
                           <figure class="product-display">
                             <div class="sale-label sale-top-left">Sale</div>
                             <img src="<%=p.product_images.first.present? ? "http://tecorb.com/admin/growace/images/#{p.sku.gsub('[','').gsub(']','').strip}_1.jpg" : "/assets/p7.jpg"%>" class="lazyOwl product-mainpic" alt="product-image" style="display: block;"> <img class="product-secondpic" alt="product-image" src="<%=p.product_images.second.present? ? "http://tecorb.com/admin/growace/images/#{p.sku.gsub('[','').gsub(']','').strip}_2.jpg" : "/assets/p7.jpg"%>"> </figure>
