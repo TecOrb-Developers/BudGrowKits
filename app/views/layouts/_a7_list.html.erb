@@ -1,32 +1,15 @@
 <div style="display: none; left: 0px;" class="level0-wrapper">
   <div class="header-nav-dropdown-wrapper clearer">
+    <%@category.packages.sample(4).each do |p|%>
     <div class="grid12-5">
-      <h4 class="heading">HTML5 + CSS3</h4>
-      <div class="ccs3-html5-box"><em class="icon-html5">&nbsp;</em> <em class="icon-css3">&nbsp;</em>
+      <div class="push_img">
+        <a href="<%=package_path(p.id)%>" data-no-turbolink=true > <img alt="women_jwellery" src="<%=package_image(p,1)%>" onerror="this.src='/assets/image-not-found.jpg'" width="100%" height="130vh"> </a>
       </div>
-      <p>Our designed to deliver almost everything you want to do online without requiring additional plugins.CSS3 has been split into "modules".</p>
+      <br>
+      <h4 class="heading"><%=p.name%></h4>
+      <!-- <p>Our designed to deliver almost everything you want to do online without requiring additional plugins.CSS3 has been split into "modules".</p> -->
     </div>
-    <div class="grid12-5">
-      <h4 class="heading">Responsive Design</h4>
-      <a href="#//">
-        <div class="icon-custom-reponsive"></div>
-      </a>
-      <p>Responsive design is a Web design to provide an optimal navigation with a minimum of resizing, and scrolling across a wide range of devices.</p>
-    </div>
-    <div class="grid12-5">
-      <h4 class="heading">Google Fonts</h4>
-      <a href="#//">
-        <div class="icon-custom-google-font"></div>
-      </a>
-      <p>Our font delivery service is built upon a reliable, global network of servers. Our flexible solution provides multiple implementation options.</p>
-    </div>
-    <div class="grid12-5">
-      <h4 class="heading">Smart Product Grid</h4>
-      <a href="#//">
-        <div class="icon-custom-grid"></div>
-      </a>
-      <p>Smart Product Grid is uses maximum available width of the screen to display content. It can be displayed on any screen or any devices.</p>
-    </div>
+    <%end%>
     <br>
   </div>
 </div>

@@ -33,7 +33,48 @@ module ApplicationHelper
 		elsif img_no==2
 			img1 = product.product_images.second.present? ? "http://tecorb.com/admin/growace/images/#{product.sku.gsub('[','').gsub(']','').strip}_2.jpg" : "/assets/large-icon-sitemap.png"
 		else
+			img1 = "http://tecorb.com/admin/growace/images200/#{product.sku.gsub('[','').gsub(']','').strip}_#{img_no}.jpg" 
+		end
+	end
+
+	def product_large_image product,img_no
+		if img_no==1
+			img1 = product.product_images.first.present? ? "http://tecorb.com/admin/growace/images/#{product.sku.gsub('[','').gsub(']','').strip}_1.jpg" : "/assets/p7.jpg"
+		elsif img_no==2
+			img1 = product.product_images.second.present? ? "http://tecorb.com/admin/growace/images/#{product.sku.gsub('[','').gsub(']','').strip}_2.jpg" : "/assets/large-icon-sitemap.png"
+		else
 			img1 = "http://tecorb.com/admin/growace/images/#{product.sku.gsub('[','').gsub(']','').strip}_#{img_no}.jpg" 
 		end
 	end
+
+	def product_small_image product,img_no
+		if img_no==1
+			img1 = product.product_images.first.present? ? "http://tecorb.com/admin/growace/images112/#{product.sku.gsub('[','').gsub(']','').strip}_1.jpg" : "/assets/p7.jpg"
+		elsif img_no==2
+			img1 = product.product_images.second.present? ? "http://tecorb.com/admin/growace/images112/#{product.sku.gsub('[','').gsub(']','').strip}_2.jpg" : "/assets/large-icon-sitemap.png"
+		else
+			img1 = "http://tecorb.com/admin/growace/images112/#{product.sku.gsub('[','').gsub(']','').strip}_#{img_no}.jpg" 
+		end
+	end
+
+	def package_image package,img_no
+		if img_no==1
+			img1 = package.package_images.first.present? ? "http://tecorb.com/admin/growace/images/#{package.sku.gsub('[','').gsub(']','').strip}_1.jpg" : "/assets/p7.jpg"
+		elsif img_no==2
+			img1 = package.package_images.second.present? ? "http://tecorb.com/admin/growace/images/#{package.sku.gsub('[','').gsub(']','').strip}_2.jpg" : "/assets/large-icon-sitemap.png"
+		else
+			img1 = "http://tecorb.com/admin/growace/images200/#{package.sku.gsub('[','').gsub(']','').strip}_#{img_no}.jpg" 
+		end
+	end
+	def package_small_image package,img_no
+		if img_no==1
+			img1 = package.package_images.first.present? ? "http://tecorb.com/admin/growace/images112/#{package.sku.gsub('[','').gsub(']','').strip}_1.jpg" : "/assets/p7.jpg"
+		elsif img_no==2
+			img1 = package.package_images.second.present? ? "http://tecorb.com/admin/growace/images112/#{package.sku.gsub('[','').gsub(']','').strip}_2.jpg" : "/assets/large-icon-sitemap.png"
+		else
+			img1 = "http://tecorb.com/admin/growace/images112/#{package.sku.gsub('[','').gsub(']','').strip}_#{img_no}.jpg" 
+		end
+	end
+
+
 end

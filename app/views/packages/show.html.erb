@@ -4,7 +4,7 @@
       <div class="row">
         <ul>
           <li class="home"> <a href="#" title="Go to Home Page"><%=@product.category.name%> </a><span>&raquo;</span></li>
-          <li class=""> <a href="#" title="Go to Home Page"><%=@product.subcategory.name%> </a><span>&raquo;</span></li>
+         
           <li class="category13"><strong> <%=@product.name%> </strong></li>
         </ul>
       </div>
@@ -23,13 +23,13 @@
                 <div class="product-img-box col-sm-4 col-xs-12">
                   <div class="new-label new-top-left"> New </div>
                   <div class="product-image">
-                    <div class="large-image"> <a href="<%=product_image(@product,1)%>" class="cloud-zoom" id="zoom1" rel="useWrapper: false, adjustY:0, adjustX:20"> <img alt="product-image" src="<%=product_image(@product,1)%>"> </a> </div>
+                    <div class="large-image"> <a href="<%=package_image(@product,1)%>" class="cloud-zoom" id="zoom1" rel="useWrapper: false, adjustY:0, adjustX:20"> <img alt="product-image" src="<%=package_image(@product,1)%>" onerror="this.src='/assets/image-not-found.jpg'"> </a> </div>
                     <div class="flexslider flexslider-thumb">
                       <ul class="previews-list slides">
                         <%@ic=0%>
-                        <%@product.product_images.each do |img|%>
+                        <%@product.package_images.each do |img|%>
                           <%@ic+=1%>
-                          <li><a href='<%=product_image(@product,@ic)%>' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '<%=product_image(@product,@ic)%>' "><img src="<%=product_image(@product,@ic)%>" width="100%" height="30vh" alt="Thumbnail 1" onerror="this.src='/assets/image-not-found.jpg'"/></a></li>
+                          <li><a href='<%=package_image(@product,@ic)%>' class='cloud-zoom-gallery' rel="useZoom: 'zoom1', smallImage: '<%=package_image(@product,@ic)%>' "><img src="<%=package_image(@product,@ic)%>" width="100%" height="30vh" alt="Thumbnail 1" onerror="this.src='/assets/image-not-found.jpg'"/></a></li>
                         <%end%>
                       </ul>
                     </div>
@@ -352,7 +352,7 @@
                                     <%elsif @sumcount==2 or @sumcount==5%>
                                       <div class="new-label new-top-left">New</div>
                                     <%end%>
-                                    <img src="<%=product_image(r,1)%>" class="lazyOwl product-mainpic" alt="product-image" onerror="this.src='/assets/image-not-found.jpg'" style="display: block;"> <img class="product-secondpic" alt="product-image" src="<%=product_image(r,2)%>" onerror="this.src='/assets/image-not-found.jpg'"> </figure>
+                                    <img src="<%=package_image(r,1)%>" class="lazyOwl product-mainpic" alt="product-image" style="display: block;" onerror="this.src='/assets/image-not-found.jpg'"> <img class="product-secondpic" alt="product-image" src="<%=package_image(r,2)%>" onerror="this.src='/assets/image-not-found.jpg'"> </figure>
                                   </a> </div>
                                 <div class="product-meta">
                                   <div class="product-action"> <a class="addcart" href="shopping_cart.html"> <i class="icon-shopping-cart">&nbsp;</i> Add to cart </a> <a class="wishlist" href="wishlist.html"> <i class="icon-heart">&nbsp;</i> </a> <a href="quick_view.html" class="quickview"> <i class="icon-zoom">&nbsp;</i> </a> </div>
@@ -406,7 +406,7 @@
                                     <%elsif @sumcount==2 or @sumcount==5%>
                                       <div class="new-label new-top-left">New</div>
                                     <%end%>
-                                    <img src="<%=product_image(r,1)%>" onerror="this.src='/assets/image-not-found.jpg'" class="lazyOwl product-mainpic" alt="product-image" style="display: block;"> <img class="product-secondpic" onerror="this.src='/assets/image-not-found.jpg'" alt="product-image" src="<%=product_image(r,2)%>"> </figure>
+                                    <img src="<%=package_image(r,1)%>" class="lazyOwl product-mainpic" alt="product-image" style="display: block;"> <img class="product-secondpic" alt="product-image" src="<%=package_image(r,2)%>" onerror="this.src='/assets/image-not-found.jpg'"> </figure>
                                   </a> </div>
                                 <div class="product-meta">
                                   <div class="product-action"> <a class="addcart" href="shopping_cart.html"> <i class="icon-shopping-cart">&nbsp;</i> Add to cart </a> <a class="wishlist" href="wishlist.html"> <i class="icon-heart">&nbsp;</i> </a> <a href="quick_view.html" class="quickview"> <i class="icon-zoom">&nbsp;</i> </a> </div>

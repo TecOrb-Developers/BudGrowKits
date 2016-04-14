@@ -17,6 +17,12 @@
 
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 			<!-- <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script> -->
+			<style type="text/css">
+				/*.img {					
+  				background: url(/assets/loading4.gif) no-repeat;
+  			}*/
+			</style>
+			
 	</head>
 	<body>
 		<div class="page">
@@ -606,10 +612,17 @@
 			        <%@num=1%>
 			        <% categories.each do |c| %>
 			      		<%@num+=1%>
-				        <li class='level0 parent drop-menu'>  
+			      		<%if c.subcategories.present?%>
+					        <li class='level0 parent drop-menu'>  
+					        	<%=link_to "<span> #{c.name}</span>".html_safe,"#"%>
+				          	<%=render partial: "layouts/a#{2}_list",:locals=>{:@category=>c}%>
+					        </li>
+				        <%else%>
+				        <li class="nav-custom-link level0 level-top parent">
 				        	<%=link_to "<span> #{c.name}</span>".html_safe,"#"%>
-				          <%if @num<=7%><%=render partial: "layouts/a#{2}_list",:locals=>{:@category=>c}%><%end%>
+				          <%=render partial: "layouts/a#{7}_list",:locals=>{:@category=>c}%>
 				        </li>
+				        <%end%>
 			        <%end%>
 			      </ul>
 			      <div id="form-search" class="search-bar">

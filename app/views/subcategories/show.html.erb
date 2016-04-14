@@ -95,7 +95,7 @@
                       <a href="<%=product_path(p.id)%>" data-no-turbolink = true>
                         <figure class="product-display">
                           <div class="sale-label sale-top-left">Sale</div>
-                          <img src='<%=product_image(p,1)%>' class="lazyOwl product-mainpic" alt="Sample Product" style="display: block;" width="100%"> <img class="product-secondpic" alt=" Sample Product" src="<%=product_image(p,2)%>" width="100%"> 
+                          <img src='<%=product_image(p,1)%>' onerror="this.src='/assets/image-not-found.jpg'" class="lazyOwl product-mainpic" alt="Sample Product" style="display: block;" width="100%"> <img class="product-secondpic" alt=" Sample Product" src="<%=product_image(p,2)%>" onerror="this.src='/assets/image-not-found.jpg'" width="100%"> 
                         </figure>
                       </a>
                     </div>
