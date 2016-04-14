@@ -345,7 +345,7 @@
                           <div class="item">
                             <div class="item-inner">
                               <div class="product-block">
-                                <div class="product-image"> <a href="product_detail.html">
+                                <div class="product-image"> <a href="<%=product_path(r.id)%>" data-no-turbolink=true>
                                   <figure class="product-display">
                                     <%if @sumcount==1 or @sumcount==3 or @sumcount==6%>
                                       <div class="sale-label sale-top-left">Sale</div>
@@ -399,7 +399,7 @@
                           <div class="item">
                             <div class="item-inner">
                               <div class="product-block">
-                                <div class="product-image"> <a href="product_detail.html">
+                                <div class="product-image"> <a href="<%=product_path(r.id)%>" data-no-turbolink=true>
                                   <figure class="product-display">
                                     <%if @sumcount==1 or @sumcount==3 or @sumcount==6%>
                                       <div class="sale-label sale-top-left">Sale</div>
