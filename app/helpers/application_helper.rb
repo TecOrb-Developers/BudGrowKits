@@ -26,4 +26,14 @@ module ApplicationHelper
 		 "level0 parent drop-menu"
 		end
 	end
+
+	def product_image product,img_no
+		if img_no==1
+			img1 = product.product_images.first.present? ? "http://tecorb.com/admin/growace/images/#{product.sku.gsub('[','').gsub(']','').strip}_1.jpg" : "/assets/p7.jpg"
+		elsif img_no==2
+			img1 = product.product_images.second.present? ? "http://tecorb.com/admin/growace/images/#{product.sku.gsub('[','').gsub(']','').strip}_2.jpg" : "/assets/large-icon-sitemap.png"
+		else
+			img1 = "http://tecorb.com/admin/growace/images/#{product.sku.gsub('[','').gsub(']','').strip}_#{img_no}.jpg" 
+		end
+	end
 end

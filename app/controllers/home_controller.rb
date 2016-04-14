@@ -3,8 +3,8 @@ class HomeController < ApplicationController
   require 'json'
   require 'csv'
   def index
-  	@product = Product.first(8)
-  	@product2 = Product.order(name: "desc").last(8)
+  	@product = Product.all.sample(8)
+  	@product2 = Product.all.sample(8)
   end
 
   def new
