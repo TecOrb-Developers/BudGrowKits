@@ -1,0 +1,7 @@
+<ul class="level0">
+  <%@category.packages.sample(8).each do |p|%>
+  <li class="level1 nav-2-1 first">
+     <%=link_to "<span> #{p.name}</span>".html_safe,package_path(p.id),"data-no-turbolink" => true%>
+  </li>
+  <%end%>
+</ul>

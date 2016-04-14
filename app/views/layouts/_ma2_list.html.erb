@@ -1,0 +1,7 @@
+<ul class="level0">
+  <%@category.subcategories.each do |s|%>
+  <li class="level1 nav-2-1 first">
+     <%=link_to "<span> #{s.name}</span>".html_safe,subcategory_path(s.id),"data-no-turbolink" => true%>
+  </li>
+  <%end%>
+</ul>
