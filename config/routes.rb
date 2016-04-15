@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :subcategories
   resources :products
   resources :packages
-
+  get '/package/:id/packages'=>"packages#package",:as=>"package_products"
   root 'home#index'
   get 'login'=>"pages#login"
 
