@@ -15,18 +15,19 @@
               <div class="caption-inner">
                 <h2 class="heading">LED Grow Lights</h2>
                 <p class="heading1">Looking for a high quality L.E.D. grow light at an affordable price online? Then you’re in luck, because Bud Grow Kits is your source for LED’s. </p>
-                <p class="intro-btn"><a href="<%=subcategory_path(1)%>" data-no-turbolink = true>Buy Now</a>
+                <p class="intro-btn"><a href="<%=subcategory_path(1)%>" data-no-turbolink = true>Buy Now</a>)
+
                 </p>
               </div>
             </div>
           </li>
           <li class="slide">
             <p>
-              <a title="#" href="#"> <img src="/assets/p17.jpg" width="100%" height="500vh" alt="Banner Image" /> </a>
+              <a title="#" href="#"> <img src="/assets/climate_control.jpeg" width="100%" height="500vh" alt="Banner Image" /> </a>
             </p>
             <div class="caption light1 top-right">
               <div class="caption-inner">
-                <p class="heading">Climate Change</p>
+                <p class="heading">Climate Control</p>
                 <p class="heading1">Affordable high quality climate control systems. Bud Grow Kits provides the best climate control systems on the market.</p>
                 <p class="intro-btn"><a href="<%=subcategory_path(23)%>" data-no-turbolink = true>Buy Now</a>
                 </p>
@@ -61,7 +62,19 @@
             <div><img src="/assets/climate.png" />
             </div>
             <h2><%=c.name%></h2>
-            <a href="#">Buy Now</a>
+            <%if c.name=="Grow Lights"%>
+              <a href="<%=subcategory_path(1)%>" data-no-turbolink = true>Buy Now</a>
+            <%elsif c.name=="Growing Essentials"%>
+              <a href="<%=subcategory_path(10)%>" data-no-turbolink = true>Buy Now</a>
+            <%elsif c.name=="Climate Control"%>
+              <a href="<%=subcategory_path(23)%>" data-no-turbolink = true>Buy Now</a>
+            <%elsif c.name=="Nutrients"%>
+              <a href="<%=subcategory_path(30)%>" data-no-turbolink = true>Buy Now</a>
+            <%else%>
+              <a href="#" data-no-turbolink = true>Buy Now</a>
+            <%end%>
+              
+              
           </li>
           <%end%>
         </ul>
